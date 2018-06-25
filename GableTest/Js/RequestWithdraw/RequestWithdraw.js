@@ -214,6 +214,12 @@ function updateStatus() {
             alert("error update");
         }
     });
+
+    var newData = $('#requestTable').bootstrapTable('getData');
+    $.each(newData, function () {
+        this.STAT_M_TEST_NAME = 'รออนุมัติ';
+    });
+    $('#requestTable').bootstrapTable('load', newData);
 }
 
 
