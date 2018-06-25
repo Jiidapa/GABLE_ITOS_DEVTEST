@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="gable_testModelStoreContainer" CdmEntityContainer="gable_testEntities">
+    <EntitySetMapping Name="bill_t_test">
+      <EntityTypeMapping TypeName="gable_testModel.bill_t_test">
+        <MappingFragment StoreEntitySet="bill_t_test">
+          <ScalarProperty Name="BILL_T_TEST_ID" ColumnName="BILL_T_TEST_ID" />
+          <ScalarProperty Name="EMP_T_TEST_NAME" ColumnName="EMP_T_TEST_NAME" />
+          <ScalarProperty Name="EMP_T_TEST_ID" ColumnName="EMP_T_TEST_ID" />
+          <ScalarProperty Name="TYPE_M_TEST_ID" ColumnName="TYPE_M_TEST_ID" />
+          <ScalarProperty Name="STAT_M_TEST_ID" ColumnName="STAT_M_TEST_ID" />
+          <ScalarProperty Name="BILL_T_TES_VALUES" ColumnName="BILL_T_TES_VALUES" />
+          <ScalarProperty Name="BILL_T_TEST_DATE" ColumnName="BILL_T_TEST_DATE" />
+          <ScalarProperty Name="BILL_T_TEST_TIMESTMP" ColumnName="BILL_T_TEST_TIMESTMP" />
+          <ScalarProperty Name="BILL_T_TEST_ACTINE" ColumnName="BILL_T_TEST_ACTINE" />
+          <ScalarProperty Name="BILL_T_TEST_APPROVE_IDNAME" ColumnName="BILL_T_TEST_APPROVE_IDNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emp_t_test">
+      <EntityTypeMapping TypeName="gable_testModel.emp_t_test">
+        <MappingFragment StoreEntitySet="emp_t_test">
+          <ScalarProperty Name="EMP_T_TEST_ID" ColumnName="EMP_T_TEST_ID" />
+          <ScalarProperty Name="POSI_M_TEST_ID" ColumnName="POSI_M_TEST_ID" />
+          <ScalarProperty Name="EMP_T_TEST_NAME" ColumnName="EMP_T_TEST_NAME" />
+          <ScalarProperty Name="EMP_T_TEST_SURNAME" ColumnName="EMP_T_TEST_SURNAME" />
+          <ScalarProperty Name="EMP_T_TEST_TELL" ColumnName="EMP_T_TEST_TELL" />
+          <ScalarProperty Name="EMP_T_TEST_EMAIL" ColumnName="EMP_T_TEST_EMAIL" />
+          <ScalarProperty Name="EMP_T_TEST_ACTIVE" ColumnName="EMP_T_TEST_ACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="posi_m_test">
+      <EntityTypeMapping TypeName="gable_testModel.posi_m_test">
+        <MappingFragment StoreEntitySet="posi_m_test">
+          <ScalarProperty Name="POSI_M_TEST_ID" ColumnName="POSI_M_TEST_ID" />
+          <ScalarProperty Name="POSI_M_TEST_NAME" ColumnName="POSI_M_TEST_NAME" />
+          <ScalarProperty Name="POSI_M_TEST_TIMESTMP" ColumnName="POSI_M_TEST_TIMESTMP" />
+          <ScalarProperty Name="POSI_M_TEST_ACTINE" ColumnName="POSI_M_TEST_ACTINE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stat_m_test">
+      <EntityTypeMapping TypeName="gable_testModel.stat_m_test">
+        <MappingFragment StoreEntitySet="stat_m_test">
+          <ScalarProperty Name="STAT_M_TEST_ID" ColumnName="STAT_M_TEST_ID" />
+          <ScalarProperty Name="STAT_M_TEST_NAME" ColumnName="STAT_M_TEST_NAME" />
+          <ScalarProperty Name="STAT_M_TEST_TIMESTMP" ColumnName="STAT_M_TEST_TIMESTMP" />
+          <ScalarProperty Name="STAT_M_TEST_ACTIVE" ColumnName="STAT_M_TEST_ACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="type_m_test">
+      <EntityTypeMapping TypeName="gable_testModel.type_m_test">
+        <MappingFragment StoreEntitySet="type_m_test">
+          <ScalarProperty Name="TYPE_M_TEST_ID" ColumnName="TYPE_M_TEST_ID" />
+          <ScalarProperty Name="TYPE_M_TEST_NAME" ColumnName="TYPE_M_TEST_NAME" />
+          <ScalarProperty Name="TYPE_M_TEST_TIMESTMP" ColumnName="TYPE_M_TEST_TIMESTMP" />
+          <ScalarProperty Name="TYPE_M_TEST_ACTIVE" ColumnName="TYPE_M_TEST_ACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

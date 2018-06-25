@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Approve";
+}
+
+<div class="row">
+    <div class="col-xs-12 row">
+        <h2 class="margin-bottom-ten">หน้าอนุมัติ</h2>
+    </div>
+    <div class="col-xs-12 row">
+        <div class="col-xs-1 font-size-content margin-lefe-zero padding-left-zero">ขื่อผู้อนุมัติ</div>
+        <div class="col-xs-2 font-size-content margin-lefe-zero padding-left-zero" >
+            <span id="nameEmpApprove"></span>
+            <span id="surnameEmpApprove"></span>
+        </div>
+        <div class="col-xs-1 font-size-content margin-lefe-zero padding-left-zero text-left" id="idEmpApprove" hidden></div>
+        <div class="col-xs-6 font-size-content pull-right">
+            <select class="form-control pull-right" id="selectStatus">
+                <option value="0">ทั้งหมด</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-xs-12 row">
+        <div class="col-xs-1 font-size-content margin-lefe-zero padding-left-zero margin-top-six">ตำแหน่ง</div>
+        <div class="col-xs-3 font-size-content margin-lefe-zero padding-left-zero margin-top-six margin-bottom-ten" id="positionEmpApprove"></div>
+    </div>
+    <div class="col-xs-12 row margin-top-fifteen">
+        <table class="font-size-content " id="tableApprove"></table>
+    </div>
+    <div class="col-xs-12 row margin-top-fifteen">
+        <button class="btn btn-success pull-right" id="approve" onclick="updateApprove()">อนุมัติ</button>
+    </div>
+</div>
+
+@section scripts{
+    <script src="@Url.Content("~/js/Approve/Approve.js")"></script>
+}
+
+

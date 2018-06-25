@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Report";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 row">
+            <h2>หน้ารายงาน</h2>
+        </div>
+        <div class="col-xs-12 row">
+            <div class="col-xs-3 font-size-content margin-lefe-zero padding-left-zero padding-right-zero">
+                <label class="control-label">ประเภท</label>
+                <select class="form-control" id="selectType">
+                    <option value="0">ทั้งหมด</option>
+                </select>
+            </div>
+            <div class="pull-right">
+                <div class="col-xs-10 form-group font-size-content margin-lefe-zero padding-left-zero">
+                    <label class="control-label">ค้นหาชื่อผู้เบิก</label>
+                    <input type="text" class="form-control hidden" id="idEmp" />
+                    <input type="text" class="form-control" placeholder="name" id="nameEmp" />
+                </div>
+                <div class="col-xs-2 font-size-content form-group  margin-lefe-zero padding-left-zero">
+                    <button style="margin-top:28px" class="btn btn-primary" onclick="searchReport()">ค้นหา</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 font-size-content margin-lefe-zero padding-left-zero">
+            <label class="control-label">สถานะ</label>
+            <select class="form-control" id="selectStatus">
+                <option value="0">ทั้งหมด</option>
+            </select>
+        </div>
+        <div class="col-xs-12 row margin-top-fifteen">
+            <table class="font-size-content" id="tableReport"></table>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="@Url.Content("~/js/Report/Report.js")"></script>
+}

@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "WithdrawMoney";
+}
+
+<div class="row">
+    <div class="col-xs-12 row">
+        <h2 class="margin-bottom-ten">หน้าผู้เบิก</h2>
+    </div>
+    <div class="col-xs-12 row">
+        <div class="col-xs-1 font-size-content margin-lefe-zero padding-left-zero">ขื่อผู้เบิก</div>
+        <div class="col-lg-2 font-size-content margin-lefe-zero padding-left-zero">
+            <span id="name"></span>
+            <span id="surname"></span>
+        </div>
+    </div>
+    <div class="col-xs-12 row">
+        <div class="col-xs-1 font-size-content margin-lefe-zero padding-left-zero margin-top-six">ตำแหน่ง</div>
+        <div class="col-xs-1 font-size-content margin-lefe-zero padding-left-zero margin-top-six margin-bottom-ten"id="position"></div>
+        <div class="col-xs-10 font-size-content text-right"><button class="btn btn-primary" id="requestWithdraw">ขอเบิก</button></div>
+    </div>
+    <div class="col-xs-12 row">
+        <table class="font-size-content" id="tableWithdrawTable"></table>
+    </div>
+</div>
+
+@section scripts{
+    <script src="@Url.Content("~/js/WithdrawMoney/WithdrawMoney.js")"></script>
+}

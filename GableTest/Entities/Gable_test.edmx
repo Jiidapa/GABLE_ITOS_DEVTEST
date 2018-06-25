@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="gable_testModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="bill_t_test">
+          <Key>
+            <PropertyRef Name="BILL_T_TEST_ID" />
+          </Key>
+          <Property Name="BILL_T_TEST_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EMP_T_TEST_NAME" Type="varchar" MaxLength="45" />
+          <Property Name="EMP_T_TEST_ID" Type="int" />
+          <Property Name="TYPE_M_TEST_ID" Type="int" />
+          <Property Name="STAT_M_TEST_ID" Type="int" />
+          <Property Name="BILL_T_TES_VALUES" Type="int" />
+          <Property Name="BILL_T_TEST_DATE" Type="date" />
+          <Property Name="BILL_T_TEST_TIMESTMP" Type="datetime" Precision="0" />
+          <Property Name="BILL_T_TEST_ACTINE" Type="char" MaxLength="1" />
+          <Property Name="BILL_T_TEST_APPROVE_IDNAME" Type="int" />
+        </EntityType>
+        <EntityType Name="emp_t_test">
+          <Key>
+            <PropertyRef Name="EMP_T_TEST_ID" />
+          </Key>
+          <Property Name="EMP_T_TEST_ID" Type="int" Nullable="false" />
+          <Property Name="POSI_M_TEST_ID" Type="int" />
+          <Property Name="EMP_T_TEST_NAME" Type="varchar" MaxLength="45" />
+          <Property Name="EMP_T_TEST_SURNAME" Type="varchar" MaxLength="45" />
+          <Property Name="EMP_T_TEST_TELL" Type="varchar" MaxLength="45" />
+          <Property Name="EMP_T_TEST_EMAIL" Type="varchar" MaxLength="45" />
+          <Property Name="EMP_T_TEST_ACTIVE" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="posi_m_test">
+          <Key>
+            <PropertyRef Name="POSI_M_TEST_ID" />
+          </Key>
+          <Property Name="POSI_M_TEST_ID" Type="int" Nullable="false" />
+          <Property Name="POSI_M_TEST_NAME" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="POSI_M_TEST_TIMESTMP" Type="timestamp" Precision="0" />
+          <Property Name="POSI_M_TEST_ACTINE" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="stat_m_test">
+          <Key>
+            <PropertyRef Name="STAT_M_TEST_ID" />
+          </Key>
+          <Property Name="STAT_M_TEST_ID" Type="int" Nullable="false" />
+          <Property Name="STAT_M_TEST_NAME" Type="varchar" MaxLength="45" />
+          <Property Name="STAT_M_TEST_TIMESTMP" Type="varchar" MaxLength="45" />
+          <Property Name="STAT_M_TEST_ACTIVE" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="type_m_test">
+          <Key>
+            <PropertyRef Name="TYPE_M_TEST_ID" />
+          </Key>
+          <Property Name="TYPE_M_TEST_ID" Type="int" Nullable="false" />
+          <Property Name="TYPE_M_TEST_NAME" Type="varchar" MaxLength="45" />
+          <Property Name="TYPE_M_TEST_TIMESTMP" Type="timestamp" Precision="0" />
+          <Property Name="TYPE_M_TEST_ACTIVE" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityContainer Name="gable_testModelStoreContainer">
+          <EntitySet Name="bill_t_test" EntityType="Self.bill_t_test" Schema="gable_test" store:Type="Tables" />
+          <EntitySet Name="emp_t_test" EntityType="Self.emp_t_test" Schema="gable_test" store:Type="Tables" />
+          <EntitySet Name="posi_m_test" EntityType="Self.posi_m_test" Schema="gable_test" store:Type="Tables" />
+          <EntitySet Name="stat_m_test" EntityType="Self.stat_m_test" Schema="gable_test" store:Type="Tables" />
+          <EntitySet Name="type_m_test" EntityType="Self.type_m_test" Schema="gable_test" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="gable_testModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="bill_t_test">
+          <Key>
+            <PropertyRef Name="BILL_T_TEST_ID" />
+          </Key>
+          <Property Name="BILL_T_TEST_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EMP_T_TEST_NAME" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="EMP_T_TEST_ID" Type="Int32" />
+          <Property Name="TYPE_M_TEST_ID" Type="Int32" />
+          <Property Name="STAT_M_TEST_ID" Type="Int32" />
+          <Property Name="BILL_T_TES_VALUES" Type="Int32" />
+          <Property Name="BILL_T_TEST_DATE" Type="DateTime" />
+          <Property Name="BILL_T_TEST_TIMESTMP" Type="DateTime" />
+          <Property Name="BILL_T_TEST_ACTINE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="BILL_T_TEST_APPROVE_IDNAME" Type="Int32" />
+        </EntityType>
+        <EntityType Name="emp_t_test">
+          <Key>
+            <PropertyRef Name="EMP_T_TEST_ID" />
+          </Key>
+          <Property Name="EMP_T_TEST_ID" Type="Int32" Nullable="false" />
+          <Property Name="POSI_M_TEST_ID" Type="Int32" />
+          <Property Name="EMP_T_TEST_NAME" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="EMP_T_TEST_SURNAME" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="EMP_T_TEST_TELL" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="EMP_T_TEST_EMAIL" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="EMP_T_TEST_ACTIVE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="posi_m_test">
+          <Key>
+            <PropertyRef Name="POSI_M_TEST_ID" />
+          </Key>
+          <Property Name="POSI_M_TEST_ID" Type="Int32" Nullable="false" />
+          <Property Name="POSI_M_TEST_NAME" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="POSI_M_TEST_TIMESTMP" Type="DateTime" />
+          <Property Name="POSI_M_TEST_ACTINE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="stat_m_test">
+          <Key>
+            <PropertyRef Name="STAT_M_TEST_ID" />
+          </Key>
+          <Property Name="STAT_M_TEST_ID" Type="Int32" Nullable="false" />
+          <Property Name="STAT_M_TEST_NAME" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="STAT_M_TEST_TIMESTMP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="STAT_M_TEST_ACTIVE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="type_m_test">
+          <Key>
+            <PropertyRef Name="TYPE_M_TEST_ID" />
+          </Key>
+          <Property Name="TYPE_M_TEST_ID" Type="Int32" Nullable="false" />
+          <Property Name="TYPE_M_TEST_NAME" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="TYPE_M_TEST_TIMESTMP" Type="DateTime" />
+          <Property Name="TYPE_M_TEST_ACTIVE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="gable_testEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="bill_t_test" EntityType="Self.bill_t_test" />
+          <EntitySet Name="emp_t_test" EntityType="Self.emp_t_test" />
+          <EntitySet Name="posi_m_test" EntityType="Self.posi_m_test" />
+          <EntitySet Name="stat_m_test" EntityType="Self.stat_m_test" />
+          <EntitySet Name="type_m_test" EntityType="Self.type_m_test" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="gable_testModelStoreContainer" CdmEntityContainer="gable_testEntities">
+          <EntitySetMapping Name="bill_t_test">
+            <EntityTypeMapping TypeName="gable_testModel.bill_t_test">
+              <MappingFragment StoreEntitySet="bill_t_test">
+                <ScalarProperty Name="BILL_T_TEST_ID" ColumnName="BILL_T_TEST_ID" />
+                <ScalarProperty Name="EMP_T_TEST_NAME" ColumnName="EMP_T_TEST_NAME" />
+                <ScalarProperty Name="EMP_T_TEST_ID" ColumnName="EMP_T_TEST_ID" />
+                <ScalarProperty Name="TYPE_M_TEST_ID" ColumnName="TYPE_M_TEST_ID" />
+                <ScalarProperty Name="STAT_M_TEST_ID" ColumnName="STAT_M_TEST_ID" />
+                <ScalarProperty Name="BILL_T_TES_VALUES" ColumnName="BILL_T_TES_VALUES" />
+                <ScalarProperty Name="BILL_T_TEST_DATE" ColumnName="BILL_T_TEST_DATE" />
+                <ScalarProperty Name="BILL_T_TEST_TIMESTMP" ColumnName="BILL_T_TEST_TIMESTMP" />
+                <ScalarProperty Name="BILL_T_TEST_ACTINE" ColumnName="BILL_T_TEST_ACTINE" />
+                <ScalarProperty Name="BILL_T_TEST_APPROVE_IDNAME" ColumnName="BILL_T_TEST_APPROVE_IDNAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="emp_t_test">
+            <EntityTypeMapping TypeName="gable_testModel.emp_t_test">
+              <MappingFragment StoreEntitySet="emp_t_test">
+                <ScalarProperty Name="EMP_T_TEST_ID" ColumnName="EMP_T_TEST_ID" />
+                <ScalarProperty Name="POSI_M_TEST_ID" ColumnName="POSI_M_TEST_ID" />
+                <ScalarProperty Name="EMP_T_TEST_NAME" ColumnName="EMP_T_TEST_NAME" />
+                <ScalarProperty Name="EMP_T_TEST_SURNAME" ColumnName="EMP_T_TEST_SURNAME" />
+                <ScalarProperty Name="EMP_T_TEST_TELL" ColumnName="EMP_T_TEST_TELL" />
+                <ScalarProperty Name="EMP_T_TEST_EMAIL" ColumnName="EMP_T_TEST_EMAIL" />
+                <ScalarProperty Name="EMP_T_TEST_ACTIVE" ColumnName="EMP_T_TEST_ACTIVE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="posi_m_test">
+            <EntityTypeMapping TypeName="gable_testModel.posi_m_test">
+              <MappingFragment StoreEntitySet="posi_m_test">
+                <ScalarProperty Name="POSI_M_TEST_ID" ColumnName="POSI_M_TEST_ID" />
+                <ScalarProperty Name="POSI_M_TEST_NAME" ColumnName="POSI_M_TEST_NAME" />
+                <ScalarProperty Name="POSI_M_TEST_TIMESTMP" ColumnName="POSI_M_TEST_TIMESTMP" />
+                <ScalarProperty Name="POSI_M_TEST_ACTINE" ColumnName="POSI_M_TEST_ACTINE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="stat_m_test">
+            <EntityTypeMapping TypeName="gable_testModel.stat_m_test">
+              <MappingFragment StoreEntitySet="stat_m_test">
+                <ScalarProperty Name="STAT_M_TEST_ID" ColumnName="STAT_M_TEST_ID" />
+                <ScalarProperty Name="STAT_M_TEST_NAME" ColumnName="STAT_M_TEST_NAME" />
+                <ScalarProperty Name="STAT_M_TEST_TIMESTMP" ColumnName="STAT_M_TEST_TIMESTMP" />
+                <ScalarProperty Name="STAT_M_TEST_ACTIVE" ColumnName="STAT_M_TEST_ACTIVE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="type_m_test">
+            <EntityTypeMapping TypeName="gable_testModel.type_m_test">
+              <MappingFragment StoreEntitySet="type_m_test">
+                <ScalarProperty Name="TYPE_M_TEST_ID" ColumnName="TYPE_M_TEST_ID" />
+                <ScalarProperty Name="TYPE_M_TEST_NAME" ColumnName="TYPE_M_TEST_NAME" />
+                <ScalarProperty Name="TYPE_M_TEST_TIMESTMP" ColumnName="TYPE_M_TEST_TIMESTMP" />
+                <ScalarProperty Name="TYPE_M_TEST_ACTIVE" ColumnName="TYPE_M_TEST_ACTIVE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

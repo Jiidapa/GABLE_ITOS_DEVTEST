@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "RequestWithdraw";
+}
+
+<div class="row">
+    <div class="col-xs-12 row">
+        <h2 class="margin-bottom-ten">หน้าเบิก</h2>
+    </div>
+
+    <div class="col-xs-12 row">
+        <div class="col-xs-1 font-size-content margin-lefe-zero padding-left-zero">ขื่อผู้เบิก</div>
+        <div class="col-xs-2 font-size-content margin-lefe-zero padding-left-zero">
+            <span id="name"></span>
+            <span id="surname"></span>
+        </div>
+        <div class="col-xs-1 font-size-content margin-lefe-zero padding-left-zero" id="idEmp" hidden></div>
+    </div>
+    <div class="col-xs-12 row">
+        <div class="col-xs-1 font-size-content margin-lefe-zero padding-left-zero margin-top-six">ตำแหน่ง</div>
+        <div class="col-xs-1 font-size-content margin-lefe-zero padding-left-zero margin-top-six margin-bottom-ten" id="position"></div>
+    </div>
+    <div class="col-xs-12 row">
+        <div class="col-xs-2 font-size-content margin-lefe-zero padding-left-zero">ประเภทรายการเบิก</div>
+        <div class="col-xs-10">
+            <select id="selectType" class="form-control">
+                <option>Options</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-xs-12 row">
+        <div class="col-xs-2 font-size-content margin-lefe-zero padding-left-zero">จำนวน</div>
+        <div class="col-xs-4">
+            <input type="text" class="form-control margin-top-six" id="billValue" placeholder="บาท" />
+        </div>
+        <div class="col-xs-4">
+            <input type="date" class="form-control margin-top-six" id="billDate" />
+        </div>
+        <div class="col-xs-2">
+            <button class="btn btn-primary pull-right margin-right-zero" onclick="addBill()">เพิ่ม</button>
+        </div>
+    </div>
+
+    <div class="col-xs-12 row margin-top-fifteen">
+        <table class="font-size-content" id="requestTable"></table>
+    </div>
+    <div class="col-xs-12 row margin-top-fifteen">
+        <div class="col-xs-11">
+            <button class="btn btn-danger pull-right" id="removeRequest">Delete</button>            
+        </div>
+        <div class="col-xs-1">
+            <button class="btn btn-success pull-right" id="requestApprove" onclick="updateStatus()">ส่งขออนุมัติ</button>
+        </div>      
+    </div>    
+</div>
+
+@section scripts{
+    <script src="@Url.Content("~/js/RequestWithdraw/RequestWithdraw.js")"></script>
+}
