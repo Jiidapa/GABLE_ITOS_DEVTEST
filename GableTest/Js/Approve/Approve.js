@@ -15,7 +15,7 @@ function updateApprove() {
     var idSelection = $('#tableApprove').bootstrapTable('getSelections');
     var list = [];
 
-    $.each(idSelection, function () {
+    $.each(idSelection, function () {        
         var b = {
             'BILL_T_TEST_ID': this.BILL_T_TEST_ID,
             'STAT_M_TEST_ID': 3,
@@ -149,22 +149,28 @@ function initTableApprove() {
     $('#tableApprove').bootstrapTable({
         columns: [{
             field: 'BILL_T_TEST_ID',
-            title: 'ลำดับ'
+            title: 'ลำดับ',
+            sortable: true
         }, {
             field: 'TYPE_M_TEST_NAME',
-            title: 'รายการ'
+            title: 'รายการ',
+            sortable: true
         }, {
             field: 'BILL_T_TES_VALUES',
-            title: 'จำนวน'
+            title: 'จำนวน',
+            sortable: true
         }, {
             field: 'STAT_M_TEST_NAME',
-            title: 'สถานะ'
+            title: 'สถานะ',
+            sortable: true
         }, {
             field: 'BILL_T_TEST_DATE',
-            title: 'วันที่'
+            title: 'วันที่',
+            sortable: true
         }, {
             field: 'EMP_T_TEST_NAME',
-            title: 'ผู้เบิก'
+            title: 'ผู้เบิก',
+            sortable: true
         }, {
             field: 'state',
             checkbox: true

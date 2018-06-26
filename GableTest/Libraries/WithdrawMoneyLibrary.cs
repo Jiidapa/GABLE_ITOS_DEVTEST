@@ -38,8 +38,8 @@ namespace GableTest.Libraries
         public List<EmployeeModel> GetEmployeeList()
         {
             try
-            {
-                             
+            {                           
+
                 List<EmployeeModel> employee = (from em in db.emp_t_test
                                          join po in db.posi_m_test on em.POSI_M_TEST_ID equals po.POSI_M_TEST_ID
                                          where em.EMP_T_TEST_NAME.Contains("อำนาจ")
@@ -66,7 +66,7 @@ namespace GableTest.Libraries
         public List<BillModel> GetBillList()
         {
             try
-            {
+            {              
                 List<BillModel> bill = ( from b in db.bill_t_test
                                          join type in db.type_m_test on b.TYPE_M_TEST_ID equals type.TYPE_M_TEST_ID
                                          join stat in db.stat_m_test on b.STAT_M_TEST_ID equals stat.STAT_M_TEST_ID
@@ -83,7 +83,7 @@ namespace GableTest.Libraries
                                              STAT_M_TEST_ID = (int)b.STAT_M_TEST_ID,
                                              STAT_M_TEST_NAME = stat.STAT_M_TEST_NAME,
                                              BILL_T_TES_VALUES = (int)b.BILL_T_TES_VALUES,
-                                             BILL_T_TEST_DATE = (DateTime)b.BILL_T_TEST_DATE,
+                                             BILL_T_TEST_DATE = (DateTime)(b.BILL_T_TEST_DATE),                
                                              BILL_T_TEST_TIMESTMP = (DateTime)b.BILL_T_TEST_TIMESTMP,
                                              BILL_T_TEST_ACTINE = b.BILL_T_TEST_ACTINE,
                                              BILL_T_TEST_APPROVE_IDNAME = (int)b.BILL_T_TEST_APPROVE_IDNAME

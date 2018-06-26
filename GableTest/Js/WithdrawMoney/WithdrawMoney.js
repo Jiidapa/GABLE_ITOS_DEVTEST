@@ -35,7 +35,7 @@ function showInformation(name, surname, position, options) {
     });
 }
 
-function getWithdrawMoney() {
+function getWithdrawMoney() {   
     $.ajax({
         type: 'GET',
         url: base_path + 'WithdrawMoney/GetBillList',
@@ -58,19 +58,24 @@ function initWithdrawMoneyTable() {
     $('#tableWithdrawTable').bootstrapTable({
         columns: [{        
             field: 'BILL_T_TEST_ID',
-            title: 'ลำดับ'
+            title: 'ลำดับ',
+            sortable: true
         }, {
             field: 'TYPE_M_TEST_NAME',
-            title: 'รายการ'
+            title: 'รายการ',
+            sortable: true
         }, {
             field: 'BILL_T_TES_VALUES',
-            title: 'จำนวน'
+            title: 'จำนวน',
+            sortable: true
         }, {
             field: 'STAT_M_TEST_NAME',
-            title: 'สถานะ'
+            title: 'สถานะ',
+            sortable: true
         }, {
             field: 'BILL_T_TEST_DATE',
-            title: 'วันที่'
+            title: 'วันที่',
+            sortable: true
         }]
     });
 }

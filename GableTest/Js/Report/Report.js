@@ -2,6 +2,8 @@
     getStatusList();
     getType();
     searchReport(0, 0, '');
+
+
 })
 
 function getStatusList() {
@@ -155,7 +157,7 @@ function searchReport(type, status, name) {
         });
     }
     //5
-    if ( type == 0 && status != 0 && nameEmp != "") {
+    if (type == 0 && status != 0 && nameEmp != "") {
         $.ajax({
             type: 'POST',
             url: base_path + 'Report/SearchReportNameStatusInput',
@@ -178,7 +180,7 @@ function searchReport(type, status, name) {
         });
     }
     //6
-    if (type != 0 && status == 0 &&  nameEmp != "") {
+    if (type != 0 && status == 0 && nameEmp != "") {
         $.ajax({
             type: 'POST',
             url: base_path + 'Report/SearchReportNameTypeInput',
@@ -248,22 +250,28 @@ function initTableReport() {
     $('#tableReport').bootstrapTable({
         columns: [{
             field: 'BILL_T_TEST_ID',
-            title: 'ลำดับ'
+            title: 'ลำดับ',
+            sortable: true
         }, {
             field: 'TYPE_M_TEST_NAME',
-            title: 'รายการ'
+            title: 'รายการ',
+            sortable: true
         }, {
             field: 'BILL_T_TES_VALUES',
-            title: 'จำนวน'
+            title: 'จำนวน',
+            sortable: true
         }, {
             field: 'STAT_M_TEST_NAME',
-            title: 'สถานะ'
+            title: 'สถานะ',
+            sortable: true
         }, {
             field: 'BILL_T_TEST_DATE',
-            title: 'วันที่'
+            title: 'วันที่',
+            sortable: true
         }, {
             field: 'EMP_T_TEST_NAME',
-            title: 'ผู้เบิก'
+            title: 'ผู้เบิก',
+            sortable: true
         }]
     });
 }
