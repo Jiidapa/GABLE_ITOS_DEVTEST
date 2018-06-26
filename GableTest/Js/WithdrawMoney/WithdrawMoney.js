@@ -27,6 +27,7 @@ function getEmployee() {
     });
 }
 
+
 function showInformation(name, surname, position, options) {
     $.each(options, function () {
         name.append($('#name').val(this.EMP_T_TEST_ID).html(this.EMP_T_TEST_NAME));

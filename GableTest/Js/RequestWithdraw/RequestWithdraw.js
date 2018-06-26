@@ -13,7 +13,13 @@
             $('#requestTable').bootstrapTable('removeByUniqueId', this.BILL_T_TEST_ID);
         });
         deleteRequestWithdraw(idSelection);
-    })
+    })   
+    
+    $('#billDate').datetimepicker({
+        viewMode: 'years',
+        format: 'DD/MM/YYYY',
+        daysOfWeekDisabled: [0, 6]
+    });
 })
 
 function getdate() {
@@ -183,7 +189,7 @@ function addBill() {
 }
 
 function updateStatus() {
-    
+
     var billList = $('#requestTable').bootstrapTable('getData');
     var list = [];
     $.each(billList, function () {
@@ -194,7 +200,7 @@ function updateStatus() {
         list.push(b);
     });
 
-    
+
     $.ajax({
         contentType: 'application/json',
         dataType: 'json',
@@ -229,9 +235,8 @@ function deleteRequestWithdraw(id) {
         dataType: 'json',
         type: 'POST',
         url: base_path + 'RequestWithdraw/DeleteRequestWithdraw',
-        data: JSON.stringify({'delUniqueID': id}),
-        success: function(data)
-        {
+        data: JSON.stringify({ 'delUniqueID': id }),
+        success: function (data) {
             if (data) {
             }
             else {
@@ -243,6 +248,7 @@ function deleteRequestWithdraw(id) {
         }
     });
 }
+
 
 function initTableRequestWithdraw() {
     $('#requestTable').bootstrapTable({

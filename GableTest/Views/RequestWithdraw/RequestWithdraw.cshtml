@@ -28,13 +28,20 @@
             </select>
         </div>
     </div>
-    <div class="col-xs-12 row">
+    <div class="col-xs-12 row margin-top-six">
         <div class="col-xs-2 font-size-content margin-lefe-zero padding-left-zero">จำนวน</div>
         <div class="col-xs-4">
-            <input type="text" class="form-control margin-top-six" id="billValue" placeholder="บาท" />
+            <input type="text" class="form-control" id="billValue" placeholder="บาท" />
         </div>
-        <div class="col-xs-4">
-            <input type="date" class="form-control margin-top-six" id="billDate" />
+        <div class='col-xs-3'>
+            <div class="form-group">
+                <div class='input-group date'>
+                    <input type="text" class="form-control" id='billDate'/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
         </div>
         <div class="col-xs-2">
             <button class="btn btn-primary pull-right margin-right-zero" onclick="addBill()">เพิ่ม</button>
@@ -46,14 +53,15 @@
     </div>
     <div class="col-xs-12 row margin-top-fifteen">
         <div class="col-xs-11">
-            <button class="btn btn-danger pull-right" id="removeRequest">Delete</button>            
+            <button class="btn btn-danger pull-right" id="removeRequest">Delete</button>
         </div>
         <div class="col-xs-1">
             <button class="btn btn-success pull-right" id="requestApprove" onclick="updateStatus()">ส่งขออนุมัติ</button>
-        </div>      
-    </div>    
+        </div>
+    </div>
 </div>
 
 @section scripts{
     <script src="@Url.Content("~/js/RequestWithdraw/RequestWithdraw.js")"></script>
 }
+
