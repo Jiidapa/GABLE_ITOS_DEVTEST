@@ -202,6 +202,7 @@ function showStatusList(s, data) {
 
 function initTableApprove() {
     $('#tableApprove').bootstrapTable({
+        
         columns: [{
             field: 'BILL_T_TEST_ID',
             title: 'ลำดับ',
@@ -223,10 +224,12 @@ function initTableApprove() {
             title: 'วันที่',
             sortable: true
         }, {
-            field: 'EMP_T_TEST_NAME',
             title: 'ผู้เบิก',
+            formatter: function (value, row) {
+                return [row.EMP_T_TEST_NAME, row.EMP_T_TEST_SURNAME].join(' ');
+            },    
             sortable: true
-        }, {
+        },{
             field: 'state',
             checkbox: true
         }]

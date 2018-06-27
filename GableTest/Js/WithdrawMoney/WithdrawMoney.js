@@ -92,6 +92,11 @@ function getWithdrawMoney() {
         success: function (data) {
             if (data) {
                 $('#tableWithdraw').bootstrapTable('load', data);
+                var getData = $('#tableWithdraw').bootstrapTable('getData');
+                $.each(getData, function () {
+                    this.BILL_T_TEST_DATE = convertUnixDateToDate(this.BILL_T_TEST_DATE);
+                });
+                $('#tableWithdraw').bootstrapTable('load', getData);
             }
             else{
                 alert("fail");
@@ -99,11 +104,9 @@ function getWithdrawMoney() {
         },
         error: function(data){
             alert("error");
-        }
+        },
     });
 
-    var getData = $('#tableWithdraw').bootstrapTable('getData');
-    alert(getData);
 }
 
 function initWithdrawMoneyTable() {

@@ -322,9 +322,11 @@ function initTableReport() {
             field: 'BILL_T_TEST_DATE',
             title: 'วันที่',
             sortable: true
-        }, {
-            field: 'EMP_T_TEST_NAME',
+        }, {            
             title: 'ผู้เบิก',
+            formatter: function (value, row) {
+                return [row.EMP_T_TEST_NAME, row.EMP_T_TEST_SURNAME].join(' ');
+            },
             sortable: true
         }]
     });

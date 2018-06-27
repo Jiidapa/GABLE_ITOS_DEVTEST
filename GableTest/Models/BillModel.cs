@@ -10,6 +10,7 @@ namespace GableTest.Models
         public int BILL_T_TEST_ID { get; set; }
         public string EMP_T_TEST_NAME {get;set;}
         public int EMP_T_TEST_ID { get; set; }
+        public string EMP_T_TEST_SURNAME { get; set; }
         public int TYPE_M_TEST_ID { get; set; }
         public int STAT_M_TEST_ID { get; set; }
         public int BILL_T_TES_VALUES { get; set; }

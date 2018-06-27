@@ -26,6 +26,7 @@ namespace GableTest.Libraries
                                select new BillModel {
                                    BILL_T_TEST_ID = b.BILL_T_TEST_ID,
                                    EMP_T_TEST_NAME = b.EMP_T_TEST_NAME,
+                                   EMP_T_TEST_SURNAME = e.EMP_T_TEST_SURNAME,
                                    EMP_T_TEST_ID = e.EMP_T_TEST_ID,
                                    TYPE_M_TEST_ID = (int)b.TYPE_M_TEST_ID,
                                    TYPE_M_TEST_NAME = t.TYPE_M_TEST_NAME,
@@ -60,6 +61,7 @@ namespace GableTest.Libraries
                                          {
                                              BILL_T_TEST_ID = b.BILL_T_TEST_ID,
                                              EMP_T_TEST_NAME = b.EMP_T_TEST_NAME,
+                                             EMP_T_TEST_SURNAME = e.EMP_T_TEST_SURNAME,
                                              EMP_T_TEST_ID = e.EMP_T_TEST_ID,
                                              TYPE_M_TEST_ID = (int)b.TYPE_M_TEST_ID,
                                              TYPE_M_TEST_NAME = t.TYPE_M_TEST_NAME,
@@ -94,6 +96,7 @@ namespace GableTest.Libraries
                                          {
                                              BILL_T_TEST_ID = b.BILL_T_TEST_ID,
                                              EMP_T_TEST_NAME = b.EMP_T_TEST_NAME,
+                                             EMP_T_TEST_SURNAME = e.EMP_T_TEST_SURNAME,
                                              EMP_T_TEST_ID = e.EMP_T_TEST_ID,
                                              TYPE_M_TEST_ID = (int)b.TYPE_M_TEST_ID,
                                              TYPE_M_TEST_NAME = t.TYPE_M_TEST_NAME,
@@ -128,6 +131,7 @@ namespace GableTest.Libraries
                                          {
                                              BILL_T_TEST_ID = b.BILL_T_TEST_ID,
                                              EMP_T_TEST_NAME = b.EMP_T_TEST_NAME,
+                                             EMP_T_TEST_SURNAME = e.EMP_T_TEST_SURNAME,
                                              EMP_T_TEST_ID = e.EMP_T_TEST_ID,
                                              TYPE_M_TEST_ID = (int)b.TYPE_M_TEST_ID,
                                              TYPE_M_TEST_NAME = t.TYPE_M_TEST_NAME,
@@ -161,6 +165,7 @@ namespace GableTest.Libraries
                                          {
                                              BILL_T_TEST_ID = b.BILL_T_TEST_ID,
                                              EMP_T_TEST_NAME = b.EMP_T_TEST_NAME,
+                                             EMP_T_TEST_SURNAME = e.EMP_T_TEST_SURNAME,
                                              EMP_T_TEST_ID = e.EMP_T_TEST_ID,
                                              TYPE_M_TEST_ID = (int)b.TYPE_M_TEST_ID,
                                              TYPE_M_TEST_NAME = t.TYPE_M_TEST_NAME,
@@ -194,6 +199,7 @@ namespace GableTest.Libraries
                                          {
                                              BILL_T_TEST_ID = b.BILL_T_TEST_ID,
                                              EMP_T_TEST_NAME = b.EMP_T_TEST_NAME,
+                                             EMP_T_TEST_SURNAME = e.EMP_T_TEST_SURNAME,
                                              EMP_T_TEST_ID = e.EMP_T_TEST_ID,
                                              TYPE_M_TEST_ID = (int)b.TYPE_M_TEST_ID,
                                              TYPE_M_TEST_NAME = t.TYPE_M_TEST_NAME,
@@ -227,6 +233,7 @@ namespace GableTest.Libraries
                                          {
                                              BILL_T_TEST_ID = b.BILL_T_TEST_ID,
                                              EMP_T_TEST_NAME = b.EMP_T_TEST_NAME,
+                                             EMP_T_TEST_SURNAME = e.EMP_T_TEST_SURNAME,
                                              EMP_T_TEST_ID = e.EMP_T_TEST_ID,
                                              TYPE_M_TEST_ID = (int)b.TYPE_M_TEST_ID,
                                              TYPE_M_TEST_NAME = t.TYPE_M_TEST_NAME,
@@ -259,6 +266,7 @@ namespace GableTest.Libraries
                                          {
                                              BILL_T_TEST_ID = b.BILL_T_TEST_ID,
                                              EMP_T_TEST_NAME = b.EMP_T_TEST_NAME,
+                                             EMP_T_TEST_SURNAME = e.EMP_T_TEST_SURNAME,
                                              EMP_T_TEST_ID = e.EMP_T_TEST_ID,
                                              TYPE_M_TEST_ID = (int)b.TYPE_M_TEST_ID,
                                              TYPE_M_TEST_NAME = t.TYPE_M_TEST_NAME,
