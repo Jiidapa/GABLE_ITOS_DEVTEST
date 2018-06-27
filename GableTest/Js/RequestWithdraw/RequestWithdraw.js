@@ -16,61 +16,11 @@
     })   
     
     $('#billDate').datetimepicker({
-        viewMode: 'years',
         format: 'DD/MM/YYYY',
         daysOfWeekDisabled: [0, 6]
     });
 })
 
-function getdate() {
-    var dNow = new Date();
-    var day = dNow.getDate();
-    var month = dNow.getMonth() + 1;
-    var year = dNow.getFullYear();
-
-    /*
-    switch (month){
-        case 1: 
-            month = "January"
-            break;
-        case 2:
-            month ="February"
-            break;
-        case 3:
-            month = "March"
-            break;
-        case 4:
-            month = "April"
-            break;
-        case 5:
-            month = "May"
-            braek;
-        case 6:
-            month = "June"
-            break;
-        case 7:
-            month = "July"
-            break;
-        case 8:
-            month = "August"
-            break;
-        case 9:
-            month = "September"
-            break;
-        case 10:
-            month = "October"
-            break;
-        case 11:
-            month = "November"
-            break;
-        case 12:
-            month = "December"
-            break;
-    }
-    */
-    var utcdate = day + '/' + month + '/' + year;
-    return utcdate;
-}
 function getEmployee() {
     $.ajax({
         type: 'GET',
